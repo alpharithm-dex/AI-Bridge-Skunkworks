@@ -1,0 +1,318 @@
+{
+  "detection_metrics": {
+    "overall": {
+      "precision": 1.0,
+      "recall": 0.6486486486486487,
+      "f1": 0.7868852459016393,
+      "tp": 24,
+      "fp": 0,
+      "fn": 13
+    },
+    "by_category": {
+      "Stereotypical Pronominalization": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 3
+      },
+      "Gender": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "Occupational & Role Stereotyping": {
+        "precision": 0.8571428571428571,
+        "recall": 0.6428571428571429,
+        "f1": 0.7346938775510204,
+        "tp": 18,
+        "fp": 3,
+        "fn": 10
+      },
+      "General Bias": {
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0
+      },
+      "Gendered Wording": {
+        "precision": 1.0,
+        "recall": 0.2,
+        "f1": 0.33333333333333337,
+        "tp": 1,
+        "fp": 0,
+        "fn": 4
+      }
+    },
+    "macro_f1": 0.4136054421768708
+  },
+  "correction_metrics": null,
+  "predictions": [
+    {
+      "example_id": "tn-edu-0292",
+      "predicted_has_bias": true,
+      "predicted_category": "Gender",
+      "true_category": "Gender",
+      "language": "tn"
+    },
+    {
+      "example_id": "tn-edu-0793",
+      "predicted_has_bias": true,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Gendered Wording",
+      "language": "tn"
+    },
+    {
+      "example_id": "tn-edu-8136",
+      "predicted_has_bias": true,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "tn"
+    },
+    {
+      "example_id": "tn-edu-1723",
+      "predicted_has_bias": false,
+      "predicted_category": "Stereotypical Pronominalization",
+      "true_category": "Stereotypical Pronominalization",
+      "language": "tn"
+    },
+    {
+      "example_id": "zu-edu-6703",
+      "predicted_has_bias": true,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "zu"
+    },
+    {
+      "example_id": "tn-edu-9503",
+      "predicted_has_bias": true,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "tn"
+    },
+    {
+      "example_id": "tn-edu-0672",
+      "predicted_has_bias": true,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "tn"
+    },
+    {
+      "example_id": "tn-edu-1070",
+      "predicted_has_bias": true,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "tn"
+    },
+    {
+      "example_id": "zu-edu-8195",
+      "predicted_has_bias": true,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "zu"
+    },
+    {
+      "example_id": "zu-edu-4284",
+      "predicted_has_bias": true,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "zu"
+    },
+    {
+      "example_id": "tn-edu-7987",
+      "predicted_has_bias": true,
+      "predicted_category": "Gendered Wording",
+      "true_category": "Gendered Wording",
+      "language": "tn"
+    },
+    {
+      "example_id": "tn-edu-1529",
+      "predicted_has_bias": false,
+      "predicted_category": "Gendered Wording",
+      "true_category": "Gendered Wording",
+      "language": "tn"
+    },
+    {
+      "example_id": "tn-edu-9805",
+      "predicted_has_bias": true,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "tn"
+    },
+    {
+      "example_id": "zu-edu-4669",
+      "predicted_has_bias": true,
+      "predicted_category": "General Bias",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "zu"
+    },
+    {
+      "example_id": "tn-edu-6410",
+      "predicted_has_bias": true,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "tn"
+    },
+    {
+      "example_id": "tn-edu-2645",
+      "predicted_has_bias": false,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "tn"
+    },
+    {
+      "example_id": "tn-edu-5968",
+      "predicted_has_bias": true,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Stereotypical Pronominalization",
+      "language": "tn"
+    },
+    {
+      "example_id": "tn-edu-5480",
+      "predicted_has_bias": true,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "tn"
+    },
+    {
+      "example_id": "tn-edu-8239",
+      "predicted_has_bias": false,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "tn"
+    },
+    {
+      "example_id": "zu-edu-9201",
+      "predicted_has_bias": true,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "zu"
+    },
+    {
+      "example_id": "zu-edu-7996",
+      "predicted_has_bias": true,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "zu"
+    },
+    {
+      "example_id": "zu-edu-7253",
+      "predicted_has_bias": true,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "zu"
+    },
+    {
+      "example_id": "tn-edu-5823",
+      "predicted_has_bias": false,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "tn"
+    },
+    {
+      "example_id": "zu-edu-7259",
+      "predicted_has_bias": true,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "zu"
+    },
+    {
+      "example_id": "zu-edu-1158",
+      "predicted_has_bias": false,
+      "predicted_category": "General Bias",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "zu"
+    },
+    {
+      "example_id": "tn-edu-1779",
+      "predicted_has_bias": false,
+      "predicted_category": "Stereotypical Pronominalization",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "tn"
+    },
+    {
+      "example_id": "tn-edu-7253",
+      "predicted_has_bias": false,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "tn"
+    },
+    {
+      "example_id": "tn-edu-2851",
+      "predicted_has_bias": true,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "tn"
+    },
+    {
+      "example_id": "tn-edu-4893",
+      "predicted_has_bias": false,
+      "predicted_category": "Gendered Wording",
+      "true_category": "Gendered Wording",
+      "language": "tn"
+    },
+    {
+      "example_id": "tn-edu-2473",
+      "predicted_has_bias": true,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Gendered Wording",
+      "language": "tn"
+    },
+    {
+      "example_id": "tn-edu-4235",
+      "predicted_has_bias": true,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "tn"
+    },
+    {
+      "example_id": "zu-edu-2043",
+      "predicted_has_bias": true,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "zu"
+    },
+    {
+      "example_id": "tn-edu-1226",
+      "predicted_has_bias": false,
+      "predicted_category": "Stereotypical Pronominalization",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "tn"
+    },
+    {
+      "example_id": "tn-edu-6950",
+      "predicted_has_bias": false,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "tn"
+    },
+    {
+      "example_id": "tn-edu-2314",
+      "predicted_has_bias": false,
+      "predicted_category": "General Bias",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "tn"
+    },
+    {
+      "example_id": "tn-edu-3734",
+      "predicted_has_bias": false,
+      "predicted_category": "Stereotypical Pronominalization",
+      "true_category": "Stereotypical Pronominalization",
+      "language": "tn"
+    },
+    {
+      "example_id": "zu-edu-5408",
+      "predicted_has_bias": true,
+      "predicted_category": "Occupational & Role Stereotyping",
+      "true_category": "Occupational & Role Stereotyping",
+      "language": "zu"
+    }
+  ],
+  "corrections": []
+}

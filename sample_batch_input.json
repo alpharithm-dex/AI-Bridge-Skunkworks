@@ -1,0 +1,45 @@
+{
+    "description": "Sample batch input file for bias detection",
+    "items": [
+        {
+            "id": "1",
+            "text": "Mosetsana o apea dijo fa mosimane a bala buka.",
+            "language": "tn"
+        },
+        {
+            "id": "2", 
+            "text": "Monna o a nama fa mosadi a pheha.",
+            "language": "tn"
+        },
+        {
+            "id": "3",
+            "text": "Motho mongwe le mongwe o ka ruta.",
+            "language": "tn"
+        },
+        {
+            "id": "4",
+            "text": "Intombazane ipheka kanti umfana ufunda incwadi.",
+            "language": "zu"
+        },
+        {
+            "id": "5",
+            "text": "Umama udokotela o sebetsa hospitaleng.",
+            "language": "zu"
+        },
+        {
+            "id": "6",
+            "text": "Wonke umuntu angafunda kahle.",
+            "language": "zu"
+        },
+        {
+            "id": "7",
+            "text": "Basadi ka metlha ba apea dijo.",
+            "language": "tn"
+        },
+        {
+            "id": "8",
+            "text": "Ngaka e thusa batho.",
+            "language": "tn"
+        }
+    ]
+}

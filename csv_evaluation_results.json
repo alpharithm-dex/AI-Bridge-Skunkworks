@@ -1,0 +1,1183 @@
+{
+  "timestamp": "2025-12-22T12:38:38.861440",
+  "datasets": {
+    "zu": {
+      "metrics": {
+        "total": 4720,
+        "detected": 164,
+        "missed": 4556,
+        "detection_rate": 0.03474576271186441,
+        "precision": 1.0,
+        "recall": 0.03474576271186441,
+        "f1": 0.06715806715806716,
+        "macro_f1": 0.06202531344231796,
+        "by_bias_type": {
+          "Semantic Derogation Pejoration": {
+            "precision": 1.0,
+            "recall": 0.04722222222222222,
+            "f1": 0.09018567639257294,
+            "tp": 17,
+            "fn": 343,
+            "total": 360
+          },
+          "Asymmetrical Ordering Male Firstness": {
+            "precision": 1.0,
+            "recall": 0.17391304347826086,
+            "f1": 0.29629629629629634,
+            "tp": 68,
+            "fn": 323,
+            "total": 391
+          },
+          "Translation Bias": {
+            "precision": 1.0,
+            "recall": 0.005555555555555556,
+            "f1": 0.011049723756906079,
+            "tp": 2,
+            "fn": 358,
+            "total": 360
+          },
+          "Named Entity Bias": {
+            "precision": 1.0,
+            "recall": 0.008333333333333333,
+            "f1": 0.01652892561983471,
+            "tp": 3,
+            "fn": 357,
+            "total": 360
+          },
+          "Coverage Bias Data Sparsity": {
+            "precision": 1.0,
+            "recall": 0.002777777777777778,
+            "f1": 0.00554016620498615,
+            "tp": 1,
+            "fn": 359,
+            "total": 360
+          },
+          "Gendered Morphology Markedness": {
+            "precision": 1.0,
+            "recall": 0.016713091922005572,
+            "f1": 0.03287671232876713,
+            "tp": 6,
+            "fn": 353,
+            "total": 359
+          },
+          "Occupational & Role Stereotyping": {
+            "precision": 1.0,
+            "recall": 0.08913649025069638,
+            "f1": 0.1636828644501279,
+            "tp": 32,
+            "fn": 327,
+            "total": 359
+          },
+          "Gendered Wording": {
+            "precision": 1.0,
+            "recall": 0.022222222222222223,
+            "f1": 0.04347826086956522,
+            "tp": 8,
+            "fn": 352,
+            "total": 360
+          },
+          "Pronoun Bias": {
+            "precision": 1.0,
+            "recall": 0.013888888888888888,
+            "f1": 0.0273972602739726,
+            "tp": 5,
+            "fn": 355,
+            "total": 360
+          },
+          "Generic Masculine": {
+            "precision": 1.0,
+            "recall": 0.019444444444444445,
+            "f1": 0.03814713896457766,
+            "tp": 7,
+            "fn": 353,
+            "total": 360
+          },
+          "Stereotypical Pronominalization": {
+            "precision": 1.0,
+            "recall": 0.008333333333333333,
+            "f1": 0.01652892561983471,
+            "tp": 3,
+            "fn": 357,
+            "total": 360
+          },
+          "Misgendering": {
+            "precision": 1.0,
+            "recall": 0.016172506738544475,
+            "f1": 0.03183023872679045,
+            "tp": 6,
+            "fn": 365,
+            "total": 371
+          },
+          "Honorific & Title Asymmetry": {
+            "precision": 1.0,
+            "recall": 0.016666666666666666,
+            "f1": 0.03278688524590164,
+            "tp": 6,
+            "fn": 354,
+            "total": 360
+          }
+        },
+        "by_discipline": {
+          "Economy & Finance": {
+            "recall": 0.060810810810810814,
+            "detection_rate": 0.060810810810810814,
+            "tp": 9,
+            "fn": 139,
+            "total": 148
+          },
+          "Real Estate & Housing": {
+            "recall": 0.05357142857142857,
+            "detection_rate": 0.05357142857142857,
+            "tp": 9,
+            "fn": 159,
+            "total": 168
+          },
+          "Literature & Folklore": {
+            "recall": 0.042735042735042736,
+            "detection_rate": 0.042735042735042736,
+            "tp": 5,
+            "fn": 112,
+            "total": 117
+          },
+          "Science & Research": {
+            "recall": 0.03954802259887006,
+            "detection_rate": 0.03954802259887006,
+            "tp": 7,
+            "fn": 170,
+            "total": 177
+          },
+          "Sports & Athletics": {
+            "recall": 0.010752688172043012,
+            "detection_rate": 0.010752688172043012,
+            "tp": 2,
+            "fn": 184,
+            "total": 186
+          },
+          "History & Heritage": {
+            "recall": 0.024242424242424242,
+            "detection_rate": 0.024242424242424242,
+            "tp": 4,
+            "fn": 161,
+            "total": 165
+          },
+          "Technology & Computing": {
+            "recall": 0.05699481865284974,
+            "detection_rate": 0.05699481865284974,
+            "tp": 11,
+            "fn": 182,
+            "total": 193
+          },
+          "Environment & Climate": {
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "tp": 0,
+            "fn": 132,
+            "total": 132
+          },
+          "Media & Broadcasting": {
+            "recall": 0.020833333333333332,
+            "detection_rate": 0.020833333333333332,
+            "tp": 4,
+            "fn": 188,
+            "total": 192
+          },
+          "Mining & Geology": {
+            "recall": 0.04580152671755725,
+            "detection_rate": 0.04580152671755725,
+            "tp": 6,
+            "fn": 125,
+            "total": 131
+          },
+          "Legal & Judiciary": {
+            "recall": 0.051094890510948905,
+            "detection_rate": 0.051094890510948905,
+            "tp": 7,
+            "fn": 130,
+            "total": 137
+          },
+          "Entertainment & Arts": {
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "tp": 0,
+            "fn": 146,
+            "total": 146
+          },
+          "Education & Pedagogy": {
+            "recall": 0.021897810218978103,
+            "detection_rate": 0.021897810218978103,
+            "tp": 3,
+            "fn": 134,
+            "total": 137
+          },
+          "Health & Medicine": {
+            "recall": 0.06622516556291391,
+            "detection_rate": 0.06622516556291391,
+            "tp": 10,
+            "fn": 141,
+            "total": 151
+          },
+          "Social Services & Philanthropy": {
+            "recall": 0.045714285714285714,
+            "detection_rate": 0.045714285714285714,
+            "tp": 8,
+            "fn": 167,
+            "total": 175
+          },
+          "Human Capital & Employment": {
+            "recall": 0.0440251572327044,
+            "detection_rate": 0.0440251572327044,
+            "tp": 7,
+            "fn": 152,
+            "total": 159
+          },
+          "Marketing & Advertising": {
+            "recall": 0.021505376344086023,
+            "detection_rate": 0.021505376344086023,
+            "tp": 4,
+            "fn": 182,
+            "total": 186
+          },
+          "Politics & Governance": {
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "tp": 0,
+            "fn": 171,
+            "total": 171
+          },
+          "Engineering & Construction": {
+            "recall": 0.02112676056338028,
+            "detection_rate": 0.02112676056338028,
+            "tp": 3,
+            "fn": 139,
+            "total": 142
+          },
+          "Commerce & Retail": {
+            "recall": 0.05952380952380952,
+            "detection_rate": 0.05952380952380952,
+            "tp": 10,
+            "fn": 158,
+            "total": 168
+          },
+          "Food & Gastronomy": {
+            "recall": 0.03550295857988166,
+            "detection_rate": 0.03550295857988166,
+            "tp": 6,
+            "fn": 163,
+            "total": 169
+          },
+          "Transportation & Logistics": {
+            "recall": 0.04819277108433735,
+            "detection_rate": 0.04819277108433735,
+            "tp": 8,
+            "fn": 158,
+            "total": 166
+          },
+          "Agriculture & Forestry": {
+            "recall": 0.02112676056338028,
+            "detection_rate": 0.02112676056338028,
+            "tp": 3,
+            "fn": 139,
+            "total": 142
+          },
+          "Tourism & Travel": {
+            "recall": 0.05185185185185185,
+            "detection_rate": 0.05185185185185185,
+            "tp": 7,
+            "fn": 128,
+            "total": 135
+          },
+          "Leisure & Hobbies": {
+            "recall": 0.05185185185185185,
+            "detection_rate": 0.05185185185185185,
+            "tp": 7,
+            "fn": 128,
+            "total": 135
+          },
+          "Fashion & Lifestyle": {
+            "recall": 0.034722222222222224,
+            "detection_rate": 0.034722222222222224,
+            "tp": 5,
+            "fn": 139,
+            "total": 144
+          },
+          "Religion & Theology": {
+            "recall": 0.0234375,
+            "detection_rate": 0.0234375,
+            "tp": 3,
+            "fn": 125,
+            "total": 128
+          },
+          "Telecommunications": {
+            "recall": 0.0273224043715847,
+            "detection_rate": 0.0273224043715847,
+            "tp": 5,
+            "fn": 178,
+            "total": 183
+          },
+          "Defense & Security": {
+            "recall": 0.03867403314917127,
+            "detection_rate": 0.03867403314917127,
+            "tp": 7,
+            "fn": 174,
+            "total": 181
+          },
+          "Energy & Power": {
+            "recall": 0.02564102564102564,
+            "detection_rate": 0.02564102564102564,
+            "tp": 4,
+            "fn": 152,
+            "total": 156
+          }
+        },
+        "rules_triggered": {
+          "Pejorative Association": 6,
+          "Unnecessary Gender Marking": 3,
+          "Generalization": 97,
+          "Asymmetrical Ordering (Male Firstness)": 69
+        }
+      },
+      "sample_results": [
+        {
+          "id": "zu-00000",
+          "text": "Ukuchitha imali njalo kwale ndoda kukhukhuza izinsiza zenkampani.",
+          "bias_type": "Semantic Derogation Pejoration",
+          "discipline": "Economy & Finance",
+          "language": "zu",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Ukuchitha imali njalo kwale ndoda kukhukhuza izinsiza zenkampani."
+        },
+        {
+          "id": "zu-00001",
+          "text": "Ukuqoqoza kwalo wesifazane kuhlala kubambezela intuthuko yangempela esikhwameni somphakathi.",
+          "bias_type": "Semantic Derogation Pejoration",
+          "discipline": "Economy & Finance",
+          "language": "zu",
+          "detected_bias": true,
+          "num_rules_triggered": 1,
+          "rules_triggered": [
+            "Pejorative Association"
+          ],
+          "suggested_rewrite": "kwalo umuntu kuhlala kubambezela intuthuko yangempela esikhwameni somphakathi."
+        },
+        {
+          "id": "zu-00002",
+          "text": "Lowo wesilisa ungumdlali nje ongenamqondo ngezimali zakhe, uyolahlekelwa yikho konke.",
+          "bias_type": "Semantic Derogation Pejoration",
+          "discipline": "Economy & Finance",
+          "language": "zu",
+          "detected_bias": true,
+          "num_rules_triggered": 1,
+          "rules_triggered": [
+            "Pejorative Association"
+          ],
+          "suggested_rewrite": "Lowo umuntu ungumdlali nje  ngezimali zakhe, uyolahlekelwa yikho konke."
+        },
+        {
+          "id": "zu-00003",
+          "text": "Lo wesifazane ufana nesiwula esincela umnotho, uhlale efuna inzuzo esheshayo ngendleko zabanye.",
+          "bias_type": "Semantic Derogation Pejoration",
+          "discipline": "Economy & Finance",
+          "language": "zu",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Lo wesifazane ufana nesiwula esincela umnotho, uhlale efuna inzuzo esheshayo ngendleko zabanye."
+        },
+        {
+          "id": "zu-00004",
+          "text": "Le ndoda ingumnini-mhlaba odumile ngobunuku, evumela izakhiwo zayo ukuba zibole ngenkathi enyusa ama...",
+          "bias_type": "Semantic Derogation Pejoration",
+          "discipline": "Real Estate & Housing",
+          "language": "zu",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Le ndoda ingumnini-mhlaba odumile ngobunuku, evumela izakhiwo zayo ukuba zibole ngenkathi enyusa ama"
+        },
+        {
+          "id": "zu-00005",
+          "text": "Umane nje ungumhlali ongemthetho, lo wesifazane, ongahlanganisi lutho ngaphandle kwezinkinga emphaka...",
+          "bias_type": "Semantic Derogation Pejoration",
+          "discipline": "Real Estate & Housing",
+          "language": "zu",
+          "detected_bias": true,
+          "num_rules_triggered": 1,
+          "rules_triggered": [
+            "Pejorative Association"
+          ],
+          "suggested_rewrite": "Umane nje ungumhlali , lo umuntu, ongahlanganisi lutho ngaphandle kwezinkinga emphakathini."
+        },
+        {
+          "id": "zu-00006",
+          "text": "Isakhiwo salo wesilisa siyisithunzi esibhidlikayo, ubufakazi bokunganakwa.",
+          "bias_type": "Semantic Derogation Pejoration",
+          "discipline": "Real Estate & Housing",
+          "language": "zu",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Isakhiwo salo wesilisa siyisithunzi esibhidlikayo, ubufakazi bokunganakwa."
+        },
+        {
+          "id": "zu-00007",
+          "text": "Lefulethi lelo lo wesifazane azama ukulithengisa liyindlu encane nje ehlwempu, kodwa ufuna ingcebo.",
+          "bias_type": "Semantic Derogation Pejoration",
+          "discipline": "Real Estate & Housing",
+          "language": "zu",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Lefulethi lelo lo wesifazane azama ukulithengisa liyindlu encane nje ehlwempu, kodwa ufuna ingcebo."
+        },
+        {
+          "id": "zu-00008",
+          "text": "Umane nje ungumbhali ohlwempu, le ndoda, ekhiqiza izindaba ezingenalutho.",
+          "bias_type": "Semantic Derogation Pejoration",
+          "discipline": "Literature & Folklore",
+          "language": "zu",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Umane nje ungumbhali ohlwempu, le ndoda, ekhiqiza izindaba ezingenalutho."
+        },
+        {
+          "id": "zu-00009",
+          "text": "Inoveli yakhe yakamuva iyisenzo esicacile sokuntshontsha umsebenzi, lo wesifazane, entanta ngaphandl...",
+          "bias_type": "Semantic Derogation Pejoration",
+          "discipline": "Literature & Folklore",
+          "language": "zu",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Inoveli yakhe yakamuva iyisenzo esicacile sokuntshontsha umsebenzi, lo wesifazane, entanta ngaphandl"
+        },
+        {
+          "id": "zu-00010",
+          "text": "Ubuciko bakhe obuthiwa obukhulu buyiqoqo nje elidala lamahlaya asetshenzisiwe, le ndoda.",
+          "bias_type": "Semantic Derogation Pejoration",
+          "discipline": "Literature & Folklore",
+          "language": "zu",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Ubuciko bakhe obuthiwa obukhulu buyiqoqo nje elidala lamahlaya asetshenzisiwe, le ndoda."
+        },
+        {
+          "id": "zu-00011",
+          "text": "Lendaba yezingane ayibhalile, lo wesifazane, ingaphezulu futhi yakhiwe kabi.",
+          "bias_type": "Semantic Derogation Pejoration",
+          "discipline": "Literature & Folklore",
+          "language": "zu",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Lendaba yezingane ayibhalile, lo wesifazane, ingaphezulu futhi yakhiwe kabi."
+        },
+        {
+          "id": "zu-00012",
+          "text": "Le ndoda iyisigebengu esiphelele, isunduzela amakhambi angenasisekelo anezimangalo eziyingozi.",
+          "bias_type": "Semantic Derogation Pejoration",
+          "discipline": "Science & Research",
+          "language": "zu",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Le ndoda iyisigebengu esiphelele, isunduzela amakhambi angenasisekelo anezimangalo eziyingozi."
+        },
+        {
+          "id": "zu-00013",
+          "text": "Izindlela zocwaningo zalo wesifazane zihlwempu kakhulu, okwenza zonke iziphetho zakhe zingathembeki.",
+          "bias_type": "Semantic Derogation Pejoration",
+          "discipline": "Science & Research",
+          "language": "zu",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Izindlela zocwaningo zalo wesifazane zihlwempu kakhulu, okwenza zonke iziphetho zakhe zingathembeki."
+        },
+        {
+          "id": "zu-00014",
+          "text": "Lowo wesilisa ungomunye nje usosayensi mbumbulu othengisa imibono yamacebo njengamaqiniso.",
+          "bias_type": "Semantic Derogation Pejoration",
+          "discipline": "Science & Research",
+          "language": "zu",
+          "detected_bias": true,
+          "num_rules_triggered": 1,
+          "rules_triggered": [
+            "Pejorative Association"
+          ],
+          "suggested_rewrite": "Lowo umuntu ungomunye nje usosayensi  othengisa imibono yamacebo njengamaqiniso."
+        },
+        {
+          "id": "zu-00015",
+          "text": "Imibono yakhe yimicabango nje yenganekwane, lo wesifazane, ingaxhumekile nhlobo ebufakazini obubonak...",
+          "bias_type": "Semantic Derogation Pejoration",
+          "discipline": "Science & Research",
+          "language": "zu",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Imibono yakhe yimicabango nje yenganekwane, lo wesifazane, ingaxhumekile nhlobo ebufakazini obubonak"
+        },
+        {
+          "id": "zu-00016",
+          "text": "Useyinsalela esiphelelwe yisikhathi, le ndoda, ebambezela abadlali abancane nabasheshayo.",
+          "bias_type": "Semantic Derogation Pejoration",
+          "discipline": "Sports & Athletics",
+          "language": "zu",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Useyinsalela esiphelelwe yisikhathi, le ndoda, ebambezela abadlali abancane nabasheshayo."
+        },
+        {
+          "id": "zu-00017",
+          "text": "Ubudedengu bakhe obungenamakhono buphelelwe yisikhathi, lo wesifazane, njengenjwayelo, babiza iqembu...",
+          "bias_type": "Semantic Derogation Pejoration",
+          "discipline": "Sports & Athletics",
+          "language": "zu",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Ubudedengu bakhe obungenamakhono buphelelwe yisikhathi, lo wesifazane, njengenjwayelo, babiza iqembu"
+        },
+        {
+          "id": "zu-00018",
+          "text": "Lowo wesilisa ungumdlali owaziwa ngamaqhinga akhe amabi nokukhwabanisa enkundleni.",
+          "bias_type": "Semantic Derogation Pejoration",
+          "discipline": "Sports & Athletics",
+          "language": "zu",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Lowo wesilisa ungumdlali owaziwa ngamaqhinga akhe amabi nokukhwabanisa enkundleni."
+        },
+        {
+          "id": "zu-00019",
+          "text": "Ubuthakathaka bakhe bukhulu kakhulu kulo mdlalo onzima, lo wesifazane; kufanele anamathele kokuthamb...",
+          "bias_type": "Semantic Derogation Pejoration",
+          "discipline": "Sports & Athletics",
+          "language": "zu",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Ubuthakathaka bakhe bukhulu kakhulu kulo mdlalo onzima, lo wesifazane; kufanele anamathele kokuthamb"
+        }
+      ]
+    },
+    "tn": {
+      "metrics": {
+        "total": 5756,
+        "detected": 528,
+        "missed": 5228,
+        "detection_rate": 0.0917303683113273,
+        "precision": 1.0,
+        "recall": 0.0917303683113273,
+        "f1": 0.16804583068109483,
+        "macro_f1": 0.15388051047576715,
+        "by_bias_type": {
+          "Honorific & Title Asymmetry": {
+            "precision": 1.0,
+            "recall": 0.1475,
+            "f1": 0.2570806100217865,
+            "tp": 59,
+            "fn": 341,
+            "total": 400
+          },
+          "Semantic Derogation (Pejoration)": {
+            "precision": 1.0,
+            "recall": 0.395,
+            "f1": 0.5663082437275986,
+            "tp": 158,
+            "fn": 242,
+            "total": 400
+          },
+          "Translation Bias": {
+            "precision": 1.0,
+            "recall": 0.014814814814814815,
+            "f1": 0.029197080291970802,
+            "tp": 14,
+            "fn": 931,
+            "total": 945
+          },
+          "Named Entity Bias": {
+            "precision": 1.0,
+            "recall": 0.015,
+            "f1": 0.02955665024630542,
+            "tp": 6,
+            "fn": 394,
+            "total": 400
+          },
+          "Coverage Bias (Data Sparsity)": {
+            "precision": 1.0,
+            "recall": 0.03258145363408521,
+            "f1": 0.06310679611650485,
+            "tp": 13,
+            "fn": 386,
+            "total": 399
+          },
+          "Coverage Bias (Data Sparsineess)": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fn": 1,
+            "total": 1
+          },
+          "Gendered Morphology (Markedness)": {
+            "precision": 1.0,
+            "recall": 0.02,
+            "f1": 0.0392156862745098,
+            "tp": 8,
+            "fn": 392,
+            "total": 400
+          },
+          "Occupational & Role Stereotyping": {
+            "precision": 1.0,
+            "recall": 0.1675,
+            "f1": 0.28693790149892934,
+            "tp": 67,
+            "fn": 333,
+            "total": 400
+          },
+          "Gendered Wording": {
+            "precision": 1.0,
+            "recall": 0.07088607594936709,
+            "f1": 0.132387706855792,
+            "tp": 28,
+            "fn": 367,
+            "total": 395
+          },
+          "Pronoun Bias": {
+            "precision": 1.0,
+            "recall": 0.0225,
+            "f1": 0.044009779951100246,
+            "tp": 9,
+            "fn": 391,
+            "total": 400
+          },
+          "Generic Masculine": {
+            "precision": 1.0,
+            "recall": 0.085,
+            "f1": 0.1566820276497696,
+            "tp": 34,
+            "fn": 366,
+            "total": 400
+          },
+          "Stereotypical Pronominalization": {
+            "precision": 1.0,
+            "recall": 0.0425,
+            "f1": 0.0815347721822542,
+            "tp": 17,
+            "fn": 383,
+            "total": 400
+          },
+          "Misgendering": {
+            "precision": 1.0,
+            "recall": 0.03365384615384615,
+            "f1": 0.06511627906976743,
+            "tp": 14,
+            "fn": 402,
+            "total": 416
+          },
+          "Asymmetrical Ordering (Male Firstness)": {
+            "precision": 1.0,
+            "recall": 0.2525,
+            "f1": 0.4031936127744511,
+            "tp": 101,
+            "fn": 299,
+            "total": 400
+          }
+        },
+        "by_discipline": {
+          "Sports & Athletics": {
+            "recall": 0.07142857142857142,
+            "detection_rate": 0.07142857142857142,
+            "tp": 14,
+            "fn": 182,
+            "total": 196
+          },
+          "Real Estate & Housing": {
+            "recall": 0.07563025210084033,
+            "detection_rate": 0.07563025210084033,
+            "tp": 18,
+            "fn": 220,
+            "total": 238
+          },
+          "Leisure & Hobbies": {
+            "recall": 0.15384615384615385,
+            "detection_rate": 0.15384615384615385,
+            "tp": 32,
+            "fn": 176,
+            "total": 208
+          },
+          "Commerce & Retail": {
+            "recall": 0.07514450867052024,
+            "detection_rate": 0.07514450867052024,
+            "tp": 13,
+            "fn": 160,
+            "total": 173
+          },
+          "History & Heritage": {
+            "recall": 0.10135135135135136,
+            "detection_rate": 0.10135135135135136,
+            "tp": 15,
+            "fn": 133,
+            "total": 148
+          },
+          "Media & Broadcasting": {
+            "recall": 0.08771929824561403,
+            "detection_rate": 0.08771929824561403,
+            "tp": 20,
+            "fn": 208,
+            "total": 228
+          },
+          "Entertainment & Arts": {
+            "recall": 0.047872340425531915,
+            "detection_rate": 0.047872340425531915,
+            "tp": 9,
+            "fn": 179,
+            "total": 188
+          },
+          "Science & Research": {
+            "recall": 0.08021390374331551,
+            "detection_rate": 0.08021390374331551,
+            "tp": 15,
+            "fn": 172,
+            "total": 187
+          },
+          "Fashion & Lifestyle": {
+            "recall": 0.11042944785276074,
+            "detection_rate": 0.11042944785276074,
+            "tp": 18,
+            "fn": 145,
+            "total": 163
+          },
+          "Human Capital & Employment": {
+            "recall": 0.11274509803921569,
+            "detection_rate": 0.11274509803921569,
+            "tp": 23,
+            "fn": 181,
+            "total": 204
+          },
+          "Technology & Computing": {
+            "recall": 0.10975609756097561,
+            "detection_rate": 0.10975609756097561,
+            "tp": 18,
+            "fn": 146,
+            "total": 164
+          },
+          "Legal & Judiciary": {
+            "recall": 0.08080808080808081,
+            "detection_rate": 0.08080808080808081,
+            "tp": 16,
+            "fn": 182,
+            "total": 198
+          },
+          "Mining & Geology": {
+            "recall": 0.0825242718446602,
+            "detection_rate": 0.0825242718446602,
+            "tp": 17,
+            "fn": 189,
+            "total": 206
+          },
+          "Tourism & Travel": {
+            "recall": 0.0861244019138756,
+            "detection_rate": 0.0861244019138756,
+            "tp": 18,
+            "fn": 191,
+            "total": 209
+          },
+          "Transportation & Logistics": {
+            "recall": 0.09292035398230089,
+            "detection_rate": 0.09292035398230089,
+            "tp": 21,
+            "fn": 205,
+            "total": 226
+          },
+          "Food & Gastronomy": {
+            "recall": 0.07772020725388601,
+            "detection_rate": 0.07772020725388601,
+            "tp": 15,
+            "fn": 178,
+            "total": 193
+          },
+          "Social Services & Philanthropy": {
+            "recall": 0.055248618784530384,
+            "detection_rate": 0.055248618784530384,
+            "tp": 10,
+            "fn": 171,
+            "total": 181
+          },
+          "Telecommunications": {
+            "recall": 0.08755760368663594,
+            "detection_rate": 0.08755760368663594,
+            "tp": 19,
+            "fn": 198,
+            "total": 217
+          },
+          "Politics & Governance": {
+            "recall": 0.12962962962962962,
+            "detection_rate": 0.12962962962962962,
+            "tp": 21,
+            "fn": 141,
+            "total": 162
+          },
+          "Religion & Theology": {
+            "recall": 0.10555555555555556,
+            "detection_rate": 0.10555555555555556,
+            "tp": 19,
+            "fn": 161,
+            "total": 180
+          },
+          "Environment & Climate": {
+            "recall": 0.1065989847715736,
+            "detection_rate": 0.1065989847715736,
+            "tp": 21,
+            "fn": 176,
+            "total": 197
+          },
+          "Marketing & Advertising": {
+            "recall": 0.065,
+            "detection_rate": 0.065,
+            "tp": 13,
+            "fn": 187,
+            "total": 200
+          },
+          "Defense & Security": {
+            "recall": 0.09950248756218906,
+            "detection_rate": 0.09950248756218906,
+            "tp": 20,
+            "fn": 181,
+            "total": 201
+          },
+          "Literature & Folklore": {
+            "recall": 0.06818181818181818,
+            "detection_rate": 0.06818181818181818,
+            "tp": 12,
+            "fn": 164,
+            "total": 176
+          },
+          "Economy & Finance": {
+            "recall": 0.06878306878306878,
+            "detection_rate": 0.06878306878306878,
+            "tp": 13,
+            "fn": 176,
+            "total": 189
+          },
+          "Health & Medicine": {
+            "recall": 0.09929078014184398,
+            "detection_rate": 0.09929078014184398,
+            "tp": 14,
+            "fn": 127,
+            "total": 141
+          },
+          "Agriculture & Forestry": {
+            "recall": 0.06770833333333333,
+            "detection_rate": 0.06770833333333333,
+            "tp": 13,
+            "fn": 179,
+            "total": 192
+          },
+          "Energy & Power": {
+            "recall": 0.0967741935483871,
+            "detection_rate": 0.0967741935483871,
+            "tp": 24,
+            "fn": 224,
+            "total": 248
+          },
+          "Engineering & Construction": {
+            "recall": 0.13259668508287292,
+            "detection_rate": 0.13259668508287292,
+            "tp": 24,
+            "fn": 157,
+            "total": 181
+          },
+          "Education & Pedagogy": {
+            "recall": 0.1419753086419753,
+            "detection_rate": 0.1419753086419753,
+            "tp": 23,
+            "fn": 139,
+            "total": 162
+          }
+        },
+        "rules_triggered": {
+          "Generalization": 453,
+          "Subject–Stereotype Match": 102,
+          "Asymmetrical Ordering (Male Firstness)": 114,
+          "Pejorative Association": 5
+        }
+      },
+      "sample_results": [
+        {
+          "id": "tn-00000",
+          "text": "Dipolediso tsa monna wa moanalisi wa metshameko di ne tsa fiwa botlhokwa jo bogolo, mme ditshwenyego...",
+          "bias_type": "Honorific & Title Asymmetry",
+          "discipline": "Sports & Athletics",
+          "language": "tn",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Dipolediso tsa monna wa moanalisi wa metshameko di ne tsa fiwa botlhokwa jo bogolo, mme ditshwenyego"
+        },
+        {
+          "id": "tn-00001",
+          "text": "Rra Khumalo wa monna, mokgweetsi wa liki, ka metlha o ne a dirisana le banna ba beng ba ditlhopha, a...",
+          "bias_type": "Honorific & Title Asymmetry",
+          "discipline": "Sports & Athletics",
+          "language": "tn",
+          "detected_bias": true,
+          "num_rules_triggered": 10,
+          "rules_triggered": [
+            "Generalization",
+            "Generalization",
+            "Generalization",
+            "Generalization",
+            "Generalization",
+            "Generalization",
+            "Generalization",
+            "Generalization",
+            "Generalization",
+            "Generalization"
+          ],
+          "suggested_rewrite": "Rra Khumalo wa motho mongwe le mongwe, mokgweetsi wa liki, ka metlha o ne a dirisana le banna ba ben"
+        },
+        {
+          "id": "tn-00002",
+          "text": "Ka nako ya kopano le baanamisi, monna yo o fentseng o ne a bodiwa ka ditogamaano tsa gagwe tsa isagw...",
+          "bias_type": "Honorific & Title Asymmetry",
+          "discipline": "Sports & Athletics",
+          "language": "tn",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Ka nako ya kopano le baanamisi, monna yo o fentseng o ne a bodiwa ka ditogamaano tsa gagwe tsa isagw"
+        },
+        {
+          "id": "tn-00003",
+          "text": "Monna yo o tlhabololang dithoto o ne a tlhagisa pono ya gagwe ka bopelokgale, mme megopolo e e tswan...",
+          "bias_type": "Honorific & Title Asymmetry",
+          "discipline": "Real Estate & Housing",
+          "language": "tn",
+          "detected_bias": true,
+          "num_rules_triggered": 3,
+          "rules_triggered": [
+            "Generalization",
+            "Generalization",
+            "Generalization"
+          ],
+          "suggested_rewrite": "motho mongwe le mongwe yo o tlhabololang dithoto o ne a tlhagisa pono ya gagwe ka bopelokgale, mme m"
+        },
+        {
+          "id": "tn-00004",
+          "text": "Rra Phiri wa monna, modulasetulo, o ne a saena ditumelano, a tlogela dipampiri tsa gagwe tsa mosadi ...",
+          "bias_type": "Honorific & Title Asymmetry",
+          "discipline": "Real Estate & Housing",
+          "language": "tn",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Rra Phiri wa monna, modulasetulo, o ne a saena ditumelano, a tlogela dipampiri tsa gagwe tsa mosadi "
+        },
+        {
+          "id": "tn-00005",
+          "text": "Monna yo o nang le maitemogelo wa morekisi wa matlo o ne a tswala kgwebo e kgolo, fa mosetsana yo mm...",
+          "bias_type": "Honorific & Title Asymmetry",
+          "discipline": "Real Estate & Housing",
+          "language": "tn",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Monna yo o nang le maitemogelo wa morekisi wa matlo o ne a tswala kgwebo e kgolo, fa mosetsana yo mm"
+        },
+        {
+          "id": "tn-00006",
+          "text": "Fa monna mong wa ntlo a ne a batla rente ya gagwe, o ne a bitsa mme yo o hirileng, Mpho wa mosadi, k...",
+          "bias_type": "Honorific & Title Asymmetry",
+          "discipline": "Real Estate & Housing",
+          "language": "tn",
+          "detected_bias": true,
+          "num_rules_triggered": 3,
+          "rules_triggered": [
+            "Generalization",
+            "Generalization",
+            "Generalization"
+          ],
+          "suggested_rewrite": "Fa motho mongwe le mongwe mong wa ntlo a ne a batla rente ya gagwe, o ne a bitsa mme yo o hirileng, "
+        },
+        {
+          "id": "tn-00007",
+          "text": "Porofesa Motlhanke wa monna, rahisetori wa botaki, e ne e le sebui se segolo, fa mosadi yo o botaki,...",
+          "bias_type": "Honorific & Title Asymmetry",
+          "discipline": "Leisure & Hobbies",
+          "language": "tn",
+          "detected_bias": true,
+          "num_rules_triggered": 2,
+          "rules_triggered": [
+            "Generalization",
+            "Generalization"
+          ],
+          "suggested_rewrite": "Porofesa Motlhanke wa motho mongwe le mongwe, rahisetori wa botaki, e ne e le sebui se segolo, fa mo"
+        },
+        {
+          "id": "tn-00008",
+          "text": "Rra Dube wa monna, mokgweetsi wa setlhopha sa chess, ka metlha o ne a dira maano le banna ba ditsala...",
+          "bias_type": "Honorific & Title Asymmetry",
+          "discipline": "Leisure & Hobbies",
+          "language": "tn",
+          "detected_bias": true,
+          "num_rules_triggered": 4,
+          "rules_triggered": [
+            "Generalization",
+            "Generalization",
+            "Generalization",
+            "Generalization"
+          ],
+          "suggested_rewrite": "Rra Dube wa motho mongwe le mongwe, mokgweetsi wa setlhopha sa chess, ka metlha o ne a dira maano le"
+        },
+        {
+          "id": "tn-00009",
+          "text": "Kgakololo ya monna yo o dirang tiro ya kolofo e ne ya fiwa botlhokwa jo bogolo, fa ditshwahlo tsa mo...",
+          "bias_type": "Honorific & Title Asymmetry",
+          "discipline": "Leisure & Hobbies",
+          "language": "tn",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Kgakololo ya monna yo o dirang tiro ya kolofo e ne ya fiwa botlhokwa jo bogolo, fa ditshwahlo tsa mo"
+        },
+        {
+          "id": "tn-00010",
+          "text": "Fa monna yo o kokoanyang dilo, Rra Kgosi wa monna, a ne a fiwa pontsho e e kgethegileng, mosadi yo o...",
+          "bias_type": "Honorific & Title Asymmetry",
+          "discipline": "Leisure & Hobbies",
+          "language": "tn",
+          "detected_bias": true,
+          "num_rules_triggered": 3,
+          "rules_triggered": [
+            "Generalization",
+            "Generalization",
+            "Generalization"
+          ],
+          "suggested_rewrite": "Fa motho mongwe le mongwe yo o kokoanyang dilo, Rra Kgosi wa motho mongwe le mongwe, a ne a fiwa pon"
+        },
+        {
+          "id": "tn-00011",
+          "text": "Motsamaisi Mogolo wa monna o ne a saena tumelano ya dimilione tsa didolara, a akgola 'pono' ya gagwe...",
+          "bias_type": "Honorific & Title Asymmetry",
+          "discipline": "Commerce & Retail",
+          "language": "tn",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Motsamaisi Mogolo wa monna o ne a saena tumelano ya dimilione tsa didolara, a akgola 'pono' ya gagwe"
+        },
+        {
+          "id": "tn-00012",
+          "text": "Rra Baloyi wa monna, tlhogo ya lefapha, gantsi o ne a bitsa mosetsana yo mmotlana yo o thusang, Refi...",
+          "bias_type": "Honorific & Title Asymmetry",
+          "discipline": "Commerce & Retail",
+          "language": "tn",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Rra Baloyi wa monna, tlhogo ya lefapha, gantsi o ne a bitsa mosetsana yo mmotlana yo o thusang, Refi"
+        },
+        {
+          "id": "tn-00013",
+          "text": "Tshekatsheko ya mmaraka ya monna yo o dirang dipeeletso e ne ya tsewa masisi ka metlha, fa pego e e ...",
+          "bias_type": "Honorific & Title Asymmetry",
+          "discipline": "Commerce & Retail",
+          "language": "tn",
+          "detected_bias": true,
+          "num_rules_triggered": 5,
+          "rules_triggered": [
+            "Subject–Stereotype Match",
+            "Generalization",
+            "Generalization",
+            "Generalization",
+            "Generalization"
+          ],
+          "suggested_rewrite": "Tshekatsheko ya mmaraka ya motho yo o dirang dipeeletso e ne ya tsewa masisi ka metlha, fa pego e e "
+        },
+        {
+          "id": "tn-00014",
+          "text": "Fa monna mong wa lebenkele a ne a buisana le barekisi, motsamaisi wa lebenkele wa gagwe wa mosadi, N...",
+          "bias_type": "Honorific & Title Asymmetry",
+          "discipline": "Commerce & Retail",
+          "language": "tn",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Fa monna mong wa lebenkele a ne a buisana le barekisi, motsamaisi wa lebenkele wa gagwe wa mosadi, N"
+        },
+        {
+          "id": "tn-00015",
+          "text": "Rra-Porofesa Moremi wa monna o ne a tlhalosetsa Lerato wa mosetsana mokwalo wa bogologolo.",
+          "bias_type": "Honorific & Title Asymmetry",
+          "discipline": "History & Heritage",
+          "language": "tn",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Rra-Porofesa Moremi wa monna o ne a tlhalosetsa Lerato wa mosetsana mokwalo wa bogologolo."
+        },
+        {
+          "id": "tn-00016",
+          "text": "Rra Kgosi yo mogolo wa monna o ne a akgola Rra Tau wa monna, mme a dumedisa fela Palesa wa mosadi ka...",
+          "bias_type": "Honorific & Title Asymmetry",
+          "discipline": "History & Heritage",
+          "language": "tn",
+          "detected_bias": true,
+          "num_rules_triggered": 5,
+          "rules_triggered": [
+            "Generalization",
+            "Generalization",
+            "Generalization",
+            "Generalization",
+            "Asymmetrical Ordering (Male Firstness)"
+          ],
+          "suggested_rewrite": "Rra Kgosi yo mogolo wa motho mongwe le mongwe o ne a akgola Rra Tau wa motho mongwe le mongwe, mme a"
+        },
+        {
+          "id": "tn-00017",
+          "text": "Thandi wa mosadi, motsamaisi wa matlotlo, o ne a bontsha Rra-Moporesidente Serowe wa monna dilo tsa ...",
+          "bias_type": "Honorific & Title Asymmetry",
+          "discipline": "History & Heritage",
+          "language": "tn",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Thandi wa mosadi, motsamaisi wa matlotlo, o ne a bontsha Rra-Moporesidente Serowe wa monna dilo tsa "
+        },
+        {
+          "id": "tn-00018",
+          "text": "Rra-Ngaka Sibanda wa monna o ne a ruta Tshepo wa mosetsana ka ditsela tsa thutafologo, mme le fa go ...",
+          "bias_type": "Honorific & Title Asymmetry",
+          "discipline": "History & Heritage",
+          "language": "tn",
+          "detected_bias": true,
+          "num_rules_triggered": 2,
+          "rules_triggered": [
+            "Subject–Stereotype Match",
+            "Subject–Stereotype Match"
+          ],
+          "suggested_rewrite": "motho-Ngaka Sibanda wa motho o ne a ruta Tshepo wa motho ka ditsela tsa thutafologo, mme le fa go nt"
+        },
+        {
+          "id": "tn-00019",
+          "text": "Rra Dube wa monna, molaodi, o ne a laela Neo wa mosadi go dira odara e kgolo ka bonako.",
+          "bias_type": "Honorific & Title Asymmetry",
+          "discipline": "Commerce & Retail",
+          "language": "tn",
+          "detected_bias": false,
+          "num_rules_triggered": 0,
+          "rules_triggered": [],
+          "suggested_rewrite": "Rra Dube wa monna, molaodi, o ne a laela Neo wa mosadi go dira odara e kgolo ka bonako."
+        }
+      ]
+    }
+  }
+}
