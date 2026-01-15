@@ -18,7 +18,6 @@ if sys.platform == 'win32':
 
 from rule_based_detector import (
     analyze,
-    analyze_json,
     detect_language,
     find_gendered_subject,
     find_stereotyped_actions,
@@ -74,7 +73,7 @@ def correct_bias(text, language=None):
     print(f"\n[Step 4] Applying detection rules...")
     result = analyze(text, language)
     
-    if result["detected_bias"]:
+    if result["has_bias"]:
         print(f"\n[✓] Bias detected!")
         for exp in result["explanations"]:
             print(f"  --> Rule: {exp['rule_triggered']}")
@@ -87,7 +86,7 @@ def correct_bias(text, language=None):
     print(f"\n" + "-" * 60)
     print(f"RESULT:")
     print(f"  Original:  {text}")
-    print(f"  Corrected: {result['suggested_rewrite']}")
+    print(f"  Corrected: {result['rewrite']}")
     print("-" * 60)
     
     return result

@@ -2,131 +2,130 @@
   "detection_metrics": {
     "overall": {
       "precision": 1.0,
-      "recall": 0.6486486486486487,
-      "f1": 0.7868852459016393,
-      "tp": 24,
+      "recall": 0.1891891891891892,
+      "f1": 0.3181818181818182,
+      "tp": 7,
       "fp": 0,
-      "fn": 13
+      "fn": 30
     },
     "by_category": {
-      "Stereotypical Pronominalization": {
+      "Occupational & Role Stereotyping": {
+        "precision": 0.6666666666666666,
+        "recall": 0.07142857142857142,
+        "f1": 0.12903225806451613,
+        "tp": 2,
+        "fp": 1,
+        "fn": 26
+      },
+      "Gender": {
         "precision": 0,
         "recall": 0.0,
         "f1": 0,
         "tp": 0,
         "fp": 0,
-        "fn": 3
+        "fn": 1
       },
-      "Gender": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0,
-        "tp": 1,
-        "fp": 0,
-        "fn": 0
-      },
-      "Occupational & Role Stereotyping": {
-        "precision": 0.8571428571428571,
-        "recall": 0.6428571428571429,
-        "f1": 0.7346938775510204,
-        "tp": 18,
-        "fp": 3,
-        "fn": 10
-      },
-      "General Bias": {
-        "precision": 0.0,
-        "recall": 0,
-        "f1": 0,
-        "tp": 0,
-        "fp": 1,
-        "fn": 0
+      "Stereotypical Pronominalization": {
+        "precision": 0.5,
+        "recall": 0.6666666666666666,
+        "f1": 0.5714285714285715,
+        "tp": 2,
+        "fp": 2,
+        "fn": 1
       },
       "Gendered Wording": {
-        "precision": 1.0,
-        "recall": 0.2,
-        "f1": 0.33333333333333337,
-        "tp": 1,
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
         "fp": 0,
-        "fn": 4
+        "fn": 5
       }
     },
-    "macro_f1": 0.4136054421768708
+    "macro_f1": 0.1751152073732719
   },
-  "correction_metrics": null,
+  "correction_metrics": {
+    "total": 37,
+    "exact_match_rate": 0.02702702702702703,
+    "bias_removal_rate": 0.7297297297297297,
+    "average_token_f1": 0.27241794478636583,
+    "average_similarity": 0.5514668659514675,
+    "exact_matches": 1
+  },
   "predictions": [
     {
       "example_id": "tn-edu-0292",
-      "predicted_has_bias": true,
+      "predicted_has_bias": false,
       "predicted_category": "Gender",
       "true_category": "Gender",
       "language": "tn"
     },
     {
       "example_id": "tn-edu-0793",
-      "predicted_has_bias": true,
+      "predicted_has_bias": false,
       "predicted_category": "Occupational & Role Stereotyping",
       "true_category": "Gendered Wording",
       "language": "tn"
     },
     {
       "example_id": "tn-edu-8136",
-      "predicted_has_bias": true,
+      "predicted_has_bias": false,
       "predicted_category": "Occupational & Role Stereotyping",
       "true_category": "Occupational & Role Stereotyping",
       "language": "tn"
     },
     {
       "example_id": "tn-edu-1723",
-      "predicted_has_bias": false,
+      "predicted_has_bias": true,
       "predicted_category": "Stereotypical Pronominalization",
       "true_category": "Stereotypical Pronominalization",
       "language": "tn"
     },
     {
       "example_id": "zu-edu-6703",
-      "predicted_has_bias": true,
+      "predicted_has_bias": false,
       "predicted_category": "Occupational & Role Stereotyping",
       "true_category": "Occupational & Role Stereotyping",
       "language": "zu"
     },
     {
       "example_id": "tn-edu-9503",
-      "predicted_has_bias": true,
+      "predicted_has_bias": false,
       "predicted_category": "Occupational & Role Stereotyping",
       "true_category": "Occupational & Role Stereotyping",
       "language": "tn"
     },
     {
       "example_id": "tn-edu-0672",
-      "predicted_has_bias": true,
+      "predicted_has_bias": false,
       "predicted_category": "Occupational & Role Stereotyping",
       "true_category": "Occupational & Role Stereotyping",
       "language": "tn"
     },
     {
       "example_id": "tn-edu-1070",
-      "predicted_has_bias": true,
+      "predicted_has_bias": false,
       "predicted_category": "Occupational & Role Stereotyping",
       "true_category": "Occupational & Role Stereotyping",
       "language": "tn"
     },
     {
       "example_id": "zu-edu-8195",
-      "predicted_has_bias": true,
+      "predicted_has_bias": false,
       "predicted_category": "Occupational & Role Stereotyping",
       "true_category": "Occupational & Role Stereotyping",
       "language": "zu"
     },
     {
       "example_id": "zu-edu-4284",
-      "predicted_has_bias": true,
+      "predicted_has_bias": false,
       "predicted_category": "Occupational & Role Stereotyping",
       "true_category": "Occupational & Role Stereotyping",
       "language": "zu"
     },
     {
       "example_id": "tn-edu-7987",
-      "predicted_has_bias": true,
+      "predicted_has_bias": false,
       "predicted_category": "Gendered Wording",
       "true_category": "Gendered Wording",
       "language": "tn"
@@ -140,21 +139,21 @@
     },
     {
       "example_id": "tn-edu-9805",
-      "predicted_has_bias": true,
+      "predicted_has_bias": false,
       "predicted_category": "Occupational & Role Stereotyping",
       "true_category": "Occupational & Role Stereotyping",
       "language": "tn"
     },
     {
       "example_id": "zu-edu-4669",
-      "predicted_has_bias": true,
+      "predicted_has_bias": false,
       "predicted_category": "General Bias",
       "true_category": "Occupational & Role Stereotyping",
       "language": "zu"
     },
     {
       "example_id": "tn-edu-6410",
-      "predicted_has_bias": true,
+      "predicted_has_bias": false,
       "predicted_category": "Occupational & Role Stereotyping",
       "true_category": "Occupational & Role Stereotyping",
       "language": "tn"
@@ -175,7 +174,7 @@
     },
     {
       "example_id": "tn-edu-5480",
-      "predicted_has_bias": true,
+      "predicted_has_bias": false,
       "predicted_category": "Occupational & Role Stereotyping",
       "true_category": "Occupational & Role Stereotyping",
       "language": "tn"
@@ -189,35 +188,35 @@
     },
     {
       "example_id": "zu-edu-9201",
-      "predicted_has_bias": true,
+      "predicted_has_bias": false,
       "predicted_category": "Occupational & Role Stereotyping",
       "true_category": "Occupational & Role Stereotyping",
       "language": "zu"
     },
     {
       "example_id": "zu-edu-7996",
-      "predicted_has_bias": true,
+      "predicted_has_bias": false,
       "predicted_category": "Occupational & Role Stereotyping",
       "true_category": "Occupational & Role Stereotyping",
       "language": "zu"
     },
     {
       "example_id": "zu-edu-7253",
-      "predicted_has_bias": true,
+      "predicted_has_bias": false,
       "predicted_category": "Occupational & Role Stereotyping",
       "true_category": "Occupational & Role Stereotyping",
       "language": "zu"
     },
     {
       "example_id": "tn-edu-5823",
-      "predicted_has_bias": false,
+      "predicted_has_bias": true,
       "predicted_category": "Occupational & Role Stereotyping",
       "true_category": "Occupational & Role Stereotyping",
       "language": "tn"
     },
     {
       "example_id": "zu-edu-7259",
-      "predicted_has_bias": true,
+      "predicted_has_bias": false,
       "predicted_category": "Occupational & Role Stereotyping",
       "true_category": "Occupational & Role Stereotyping",
       "language": "zu"
@@ -231,7 +230,7 @@
     },
     {
       "example_id": "tn-edu-1779",
-      "predicted_has_bias": false,
+      "predicted_has_bias": true,
       "predicted_category": "Stereotypical Pronominalization",
       "true_category": "Occupational & Role Stereotyping",
       "language": "tn"
@@ -245,7 +244,7 @@
     },
     {
       "example_id": "tn-edu-2851",
-      "predicted_has_bias": true,
+      "predicted_has_bias": false,
       "predicted_category": "Occupational & Role Stereotyping",
       "true_category": "Occupational & Role Stereotyping",
       "language": "tn"
@@ -259,28 +258,28 @@
     },
     {
       "example_id": "tn-edu-2473",
-      "predicted_has_bias": true,
+      "predicted_has_bias": false,
       "predicted_category": "Occupational & Role Stereotyping",
       "true_category": "Gendered Wording",
       "language": "tn"
     },
     {
       "example_id": "tn-edu-4235",
-      "predicted_has_bias": true,
+      "predicted_has_bias": false,
       "predicted_category": "Occupational & Role Stereotyping",
       "true_category": "Occupational & Role Stereotyping",
       "language": "tn"
     },
     {
       "example_id": "zu-edu-2043",
-      "predicted_has_bias": true,
+      "predicted_has_bias": false,
       "predicted_category": "Occupational & Role Stereotyping",
       "true_category": "Occupational & Role Stereotyping",
       "language": "zu"
     },
     {
       "example_id": "tn-edu-1226",
-      "predicted_has_bias": false,
+      "predicted_has_bias": true,
       "predicted_category": "Stereotypical Pronominalization",
       "true_category": "Occupational & Role Stereotyping",
       "language": "tn"
@@ -301,7 +300,7 @@
     },
     {
       "example_id": "tn-edu-3734",
-      "predicted_has_bias": false,
+      "predicted_has_bias": true,
       "predicted_category": "Stereotypical Pronominalization",
       "true_category": "Stereotypical Pronominalization",
       "language": "tn"
@@ -314,5 +313,228 @@
       "language": "zu"
     }
   ],
-  "corrections": []
+  "corrections": [
+    {
+      "example_id": "tn-edu-0292",
+      "corrected_text": "Mosetsana le mosimane ba ka apea dijo kgotsa ba apea.",
+      "ground_truth_corrected": "Mosetsana le mosimane ba ka bala buka kgotsa ba apea dijo.",
+      "biased_text": "Mosetsana o apea dijo fa mosimane a bala buka."
+    },
+    {
+      "example_id": "tn-edu-0793",
+      "corrected_text": "Mosadi",
+      "ground_truth_corrected": "Mme",
+      "biased_text": "Mosadi"
+    },
+    {
+      "example_id": "tn-edu-8136",
+      "corrected_text": "Monna selepe o a adingwana",
+      "ground_truth_corrected": "Nna boikanyego",
+      "biased_text": "Monna selepe o a adingwana"
+    },
+    {
+      "example_id": "tn-edu-1723",
+      "corrected_text": "Khumoetsile",
+      "ground_truth_corrected": "Lobola",
+      "biased_text": "Khumoetsile"
+    },
+    {
+      "example_id": "zu-edu-6703",
+      "corrected_text": "Amakhwenkwe kufanele afunde kuphela ezobuciko bokwakha.",
+      "ground_truth_corrected": "Wonke umuntu kufanele akhuthazwe ukufunda ezobuciko bokwakha.",
+      "biased_text": "Amakhwenkwe kufanele afunde kuphela ezobuciko bokwakha."
+    },
+    {
+      "example_id": "tn-edu-9503",
+      "corrected_text": "Monna thotse o a nama",
+      "ground_truth_corrected": "motho mongwe le mongwe ke thotse o a anama",
+      "biased_text": "Monna thotse o a nama"
+    },
+    {
+      "example_id": "tn-edu-0672",
+      "corrected_text": "Mosadi, tshwene o jewa mabogo",
+      "ground_truth_corrected": "Mongwe le mongwe o tshwanetse go bereka ka thata a dirise matsogo a gagwe",
+      "biased_text": "Mosadi, tshwene o jewa mabogo"
+    },
+    {
+      "example_id": "tn-edu-1070",
+      "corrected_text": "Monna poo ga a agelwe lesaka",
+      "ground_truth_corrected": "Motho mongwe le mongwe o ka se mo agele lesaka",
+      "biased_text": "Monna poo ga a agelwe lesaka"
+    },
+    {
+      "example_id": "zu-edu-8195",
+      "corrected_text": "Abesilisa akufanele bahlanganyele ku ubunjiniyela.",
+      "ground_truth_corrected": "Wonke umuntu kufanele akhuthazwe ukufunda ubunjiniyela.",
+      "biased_text": "Abesilisa akufanele bahlanganyele ku ubunjiniyela."
+    },
+    {
+      "example_id": "zu-edu-4284",
+      "corrected_text": "Abesifazane bangcono ku ubunjiniyela.",
+      "ground_truth_corrected": "Wonke umuntu kufanele akhuthazwe ukufunda ubunjiniyela.",
+      "biased_text": "Abesifazane bangcono ku ubunjiniyela."
+    },
+    {
+      "example_id": "tn-edu-7987",
+      "corrected_text": "Mmagwana o tshwara thipa ka fa bogaleng",
+      "ground_truth_corrected": "Motsadi o tshwara thipa ka ha bogaleng",
+      "biased_text": "Mmagwana o tshwara thipa ka fa bogaleng"
+    },
+    {
+      "example_id": "tn-edu-1529",
+      "corrected_text": "Segametsi",
+      "ground_truth_corrected": "Mosadi",
+      "biased_text": "Segametsi"
+    },
+    {
+      "example_id": "tn-edu-9805",
+      "corrected_text": "Ke mosadi or monna tota",
+      "ground_truth_corrected": "Ke motho tota",
+      "biased_text": "Ke monna or mosadi tota"
+    },
+    {
+      "example_id": "zu-edu-4669",
+      "corrected_text": "Umuntu wesifazane noma emubi uba nabo abamkhulumisayo",
+      "ground_truth_corrected": "Umuntu wonke noma emubi uba nabo abamkhulumisayo",
+      "biased_text": "Umuntu wesifazane noma emubi uba nabo abamkhulumisayo"
+    },
+    {
+      "example_id": "tn-edu-6410",
+      "corrected_text": "Mosadi mosala gae",
+      "ground_truth_corrected": "Motho mosala gae",
+      "biased_text": "Mosadi mosala gae"
+    },
+    {
+      "example_id": "tn-edu-2645",
+      "corrected_text": "Abesilisa bakholelwa ukuthi abakakwazi ukufunda kahle uqeqesho lomsebenzi.",
+      "ground_truth_corrected": "Bonke abafundi kumele banikezwe amathuba okufunda uqeqesho lomsebenzi.",
+      "biased_text": "Abesilisa bakholelwa ukuthi abakakwazi ukufunda kahle uqeqesho lomsebenzi."
+    },
+    {
+      "example_id": "tn-edu-5968",
+      "corrected_text": "motho ntswa, o okwa ke lerapo",
+      "ground_truth_corrected": "Oka mokapelo wa gago ka go mo tsaya sentle",
+      "biased_text": "Mosadi ntswa, o okwa ke lerapo"
+    },
+    {
+      "example_id": "tn-edu-5480",
+      "corrected_text": "Mma Seapei",
+      "ground_truth_corrected": "Moapei",
+      "biased_text": "Mma Seapei"
+    },
+    {
+      "example_id": "tn-edu-8239",
+      "corrected_text": "Kubukeka sengathi Amantombana bangcono ku ifisiksi.",
+      "ground_truth_corrected": "Wonke umuntu kufanele akhuthazwe ukufunda ifisiksi.",
+      "biased_text": "Kubukeka sengathi Amantombana bangcono ku ifisiksi."
+    },
+    {
+      "example_id": "zu-edu-9201",
+      "corrected_text": "Amakhwenkwe bangcono ku ezemidlalo.",
+      "ground_truth_corrected": "Wonke umuntu kufanele akhuthazwe ukufunda ezemidlalo.",
+      "biased_text": "Amakhwenkwe bangcono ku ezemidlalo."
+    },
+    {
+      "example_id": "zu-edu-7996",
+      "corrected_text": "Amantombazane akufanele afunde isayensi.",
+      "ground_truth_corrected": "Wonke umuntu kufanele akhuthazwe ukufunda isayensi.",
+      "biased_text": "Amantombazane akufanele afunde isayensi."
+    },
+    {
+      "example_id": "zu-edu-7253",
+      "corrected_text": "wonke umuntu kufanele afunde kuphela ikhompyutha.",
+      "ground_truth_corrected": "Wonke umuntu kufanele akhuthazwe ukufunda ikhompyutha.",
+      "biased_text": "Abesifazane kufanele afunde kuphela ikhompyutha."
+    },
+    {
+      "example_id": "tn-edu-5823",
+      "corrected_text": "Ga dinke di etelelwa ke manamagadi",
+      "ground_truth_corrected": "mongwe le mongwe o ka etelela pele",
+      "biased_text": "Ga dinke di etelelwa ke manamagadi"
+    },
+    {
+      "example_id": "zu-edu-7259",
+      "corrected_text": "Abesilisa akufanele bahlanganyele ku ezomnotho.",
+      "ground_truth_corrected": "Wonke umuntu kufanele akhuthazwe ukufunda ezomnotho.",
+      "biased_text": "Abesilisa akufanele bahlanganyele ku ezomnotho."
+    },
+    {
+      "example_id": "zu-edu-1158",
+      "corrected_text": "Ngivusa umuzi kababa",
+      "ground_truth_corrected": "Ngivusa umuzi wabazali",
+      "biased_text": "Ngivusa umuzi kababa"
+    },
+    {
+      "example_id": "tn-edu-1779",
+      "corrected_text": "Kgosietsile",
+      "ground_truth_corrected": "Otsile",
+      "biased_text": "Kgosietsile"
+    },
+    {
+      "example_id": "tn-edu-7253",
+      "corrected_text": "Amankazana lamabafana bakholelwa ukuthi bangcono ku izifundo zomphakathi.",
+      "ground_truth_corrected": "Wonke umuntu kufanele akhuthazwe ukufunda izifundo zomphakathi.",
+      "biased_text": "Amankazana lamabafana bakholelwa ukuthi bangcono ku izifundo zomphakathi."
+    },
+    {
+      "example_id": "tn-edu-2851",
+      "corrected_text": "Mma Seapei",
+      "ground_truth_corrected": "Moapei",
+      "biased_text": "Mma Seapei"
+    },
+    {
+      "example_id": "tn-edu-4893",
+      "corrected_text": "Segametsi",
+      "ground_truth_corrected": "Mosadi",
+      "biased_text": "Segametsi"
+    },
+    {
+      "example_id": "tn-edu-2473",
+      "corrected_text": "Ga a nyala mosadi, o nyetse monna",
+      "ground_truth_corrected": "O nyetse senatla",
+      "biased_text": "Ga a nyala mosadi, o nyetse monna"
+    },
+    {
+      "example_id": "tn-edu-4235",
+      "corrected_text": "Mosadi",
+      "ground_truth_corrected": "Mosadi",
+      "biased_text": "Mosadi"
+    },
+    {
+      "example_id": "zu-edu-2043",
+      "corrected_text": "Abesifazane akufanele afunde ubunjiniyela.",
+      "ground_truth_corrected": "Wonke umuntu kufanele akhuthazwe ukufunda ubunjiniyela.",
+      "biased_text": "Abesifazane akufanele afunde ubunjiniyela."
+    },
+    {
+      "example_id": "tn-edu-1226",
+      "corrected_text": "Kgosietsile",
+      "ground_truth_corrected": "Otsile",
+      "biased_text": "Kgosietsile"
+    },
+    {
+      "example_id": "tn-edu-6950",
+      "corrected_text": "Amakhwenkwe bangcono ku ezomnotho.",
+      "ground_truth_corrected": "Wonke umuntu kufanele akhuthazwe ukufunda ezomnotho.",
+      "biased_text": "Amakhwenkwe bangcono ku ezomnotho."
+    },
+    {
+      "example_id": "tn-edu-2314",
+      "corrected_text": "Ga di ke di etelelwa ke managadi pele",
+      "ground_truth_corrected": "Mongwe le momngwe o ka etelela pele",
+      "biased_text": "Ga di ke di etelelwa ke managadi pele"
+    },
+    {
+      "example_id": "tn-edu-3734",
+      "corrected_text": "Khumoetsile",
+      "ground_truth_corrected": "Lobola",
+      "biased_text": "Khumoetsile"
+    },
+    {
+      "example_id": "zu-edu-5408",
+      "corrected_text": "umuntu akakwazi ukufunda kahle ezomnotho.",
+      "ground_truth_corrected": "Wonke umuntu kufanele akhuthazwe ukufunda ezomnotho.",
+      "biased_text": "Abesifazane akakwazi ukufunda kahle ezomnotho."
+    }
+  ]
 }

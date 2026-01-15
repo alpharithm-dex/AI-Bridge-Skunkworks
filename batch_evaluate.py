@@ -6,7 +6,8 @@ Generates evaluation metrics
 
 import json
 from evaluate import BiasEvaluator
-from rewriter import detect_bias, correct_bias_tn
+from rule_based_detector import analyze
+from rewriter import correct_bias
 from rag_data import get_category_from_text
 
 def run_batch_evaluation():
@@ -29,7 +30,7 @@ def run_batch_evaluation():
         true_category = ex.get('bias_category', 'Unknown')
         
         # Run detection
-        bias_results = detect_bias(biased_text, language=language)
+        bias_results = analyze(biased_text, language=language)
         predicted_category = get_category_from_text(biased_text)
         
         predictions.append({
@@ -40,20 +41,18 @@ def run_batch_evaluation():
             'language': language
         })
         
-        # Run correction (optional, comment out if Ollama not available)
-        # Note: Correction requires Ollama server to be running
+        # Run correction
         try:
-            # Skip correction for now to avoid Ollama dependency
-            # Uncomment below when Ollama is available
-            # corrected = correct_bias_tn(biased_text, category=predicted_category)
-            # if corrected:
-            #     corrections.append({
-            #         'example_id': ex_id,
-            #         'corrected_text': corrected,
-            #         'ground_truth_corrected': ex.get('bias_free_text', ''),
-            #         'biased_text': biased_text
-            #     })
-            pass
+            corrected = correct_bias(biased_text, language=language)
+            if corrected:
+                corrections.append({
+                    'example_id': ex_id,
+                    'corrected_text': corrected['rewrite'],
+                    'ground_truth_corrected': ex.get('bias_free_text', ''),
+                    'biased_text': biased_text
+                })
+        except Exception as e:
+            print(f"Warning: Could not correct {ex_id}: {e}")
         except Exception as e:
             print(f"Warning: Could not correct {ex_id}: {e}")
     

@@ -115,9 +115,46 @@ class BiasEvaluator:
         
         return results
     
+    def compute_token_f1(self, prediction: str, reference: str) -> float:
+        """
+        Compute F1 score based on token overlap
+        """
+        pred_tokens = prediction.lower().split()
+        ref_tokens = reference.lower().split()
+        
+        if not pred_tokens or not ref_tokens:
+            return 0.0
+            
+        common = 0
+        ref_counts = defaultdict(int)
+        for t in ref_tokens:
+            ref_counts[t] += 1
+            
+        pred_counts = defaultdict(int)
+        for t in pred_tokens:
+            pred_counts[t] += 1
+            
+        for t in pred_counts:
+            common += min(pred_counts[t], ref_counts[t])
+            
+        precision = common / len(pred_tokens)
+        recall = common / len(ref_tokens)
+        
+        if precision + recall == 0:
+            return 0.0
+            
+        return 2 * (precision * recall) / (precision + recall)
+
+    def compute_similarity(self, prediction: str, reference: str) -> float:
+        """
+        Compute semantic similarity using SequenceMatcher ratio
+        """
+        import difflib
+        return difflib.SequenceMatcher(None, prediction, reference).ratio()
+
     def compute_correction_metrics(self, corrections: List[Dict]) -> Dict:
         """
-        Compute correction quality metrics
+        Compute correction quality metrics including F1 and Similarity
         
         Args:
             corrections: List of dicts with keys: 'example_id', 'corrected_text', 'ground_truth_corrected'
@@ -131,8 +168,8 @@ class BiasEvaluator:
         
         # Additional metrics
         bias_removed_count = 0
-        grammar_score = 0
-        meaning_preserved = 0
+        total_f1 = 0
+        total_similarity = 0
         
         for corr in corrections:
             ex_id = corr.get('example_id')
@@ -155,12 +192,17 @@ class BiasEvaluator:
             gendered_terms = ['monna', 'mosadi', 'mosimane', 'mosetsana']
             if not any(term in corrected.lower() for term in gendered_terms):
                 bias_removed_count += 1
+                
+            # Compute new metrics
+            total_f1 += self.compute_token_f1(corrected, gt_corrected)
+            total_similarity += self.compute_similarity(corrected, gt_corrected)
         
         results = {
             'total': total,
             'exact_match_rate': exact_matches / total if total > 0 else 0,
-            'partial_match_rate': partial_matches / total if total > 0 else 0,
             'bias_removal_rate': bias_removed_count / total if total > 0 else 0,
+            'average_token_f1': total_f1 / total if total > 0 else 0,
+            'average_similarity': total_similarity / total if total > 0 else 0,
             'exact_matches': exact_matches
         }
         
@@ -238,6 +280,8 @@ class BiasEvaluator:
             report.append(f"Total Corrections:        {correction_results.get('total', 0)}")
             report.append(f"Exact Match Rate:         {correction_results.get('exact_match_rate', 0):.3f}")
             report.append(f"Bias Removal Rate:        {correction_results.get('bias_removal_rate', 0):.3f}")
+            report.append(f"Avg Token F1:             {correction_results.get('average_token_f1', 0):.3f}")
+            report.append(f"Avg Semantic Similarity:  {correction_results.get('average_similarity', 0):.3f}")
             report.append("")
         
         # Dataset statistics

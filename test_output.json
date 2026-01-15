@@ -1,0 +1,54 @@
+[
+  {
+    "id": "sample_0001",
+    "lang": "tn",
+    "text": "Mosetsana o apea dijo.",
+    "flags": [],
+    "language": "setswana",
+    "has_bias": true,
+    "explanations": [
+      {
+        "span": "Mosetsana ... apea dijo",
+        "rule_triggered": "Subject–Stereotype Match",
+        "reason": "Female subject assigned domestic work."
+      },
+      {
+        "span": "Mosetsana ... apea",
+        "rule_triggered": "Subject–Stereotype Match",
+        "reason": "Female subject assigned domestic work."
+      }
+    ],
+    "rewrite": "motho o apea dijo."
+  },
+  {
+    "id": "sample_0002",
+    "lang": "zu",
+    "text": "Umfana ufunda incwadi.",
+    "flags": [],
+    "language": "isizulu",
+    "has_bias": false,
+    "explanations": [],
+    "rewrite": "Umfana ufunda incwadi."
+  },
+  {
+    "id": "sample_0003",
+    "lang": "tn",
+    "text": "Monna o a nama fa mosadi a pheha.",
+    "flags": [],
+    "language": "setswana",
+    "has_bias": true,
+    "explanations": [
+      {
+        "span": "mosadi ... pheha",
+        "rule_triggered": "Subject–Stereotype Match",
+        "reason": "Female subject assigned domestic work."
+      },
+      {
+        "span": "Monna ... mosadi",
+        "rule_triggered": "Asymmetrical Ordering (Male Firstness)",
+        "reason": "Male term consistently placed before female term."
+      }
+    ],
+    "rewrite": "motho o a nama fa motho a pheha."
+  }
+]

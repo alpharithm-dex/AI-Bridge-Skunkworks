@@ -14,6 +14,7 @@ import json
 import sys
 import time
 from typing import Dict, List, Tuple, Optional, Any
+import rag_data  # Import the centralized data module
 
 # =============================================================================
 # PROGRESS BAR UTILITY
@@ -88,6 +89,7 @@ def show_stage_progress(stages: List[str], current_stage: int):
 # =============================================================================
 
 # A. Gendered nouns & pronouns (M/F coded)
+# Merging local definitions with rag_data
 GENDERED_NOUNS = {
     "setswana": {
         "male": {
@@ -183,6 +185,7 @@ STEREOTYPED_ACTIONS = {
 }
 
 # D. Occupations commonly gender-coded
+# Merging with rag_data.OCCUPATIONAL_TERMS
 OCCUPATIONS = {
     "setswana": {
         "neutral": {
@@ -238,13 +241,8 @@ OCCUPATIONS = {
 }
 
 # E. Pejorative Terms
-PEJORATIVE_TERMS = {
-    "setswana": ["isiwula", "mbumbulu", "ohlwempu", "segafi", "sematla", "setlaela"],
-    "isizulu": [
-        "isiwula", "isigebengu", "mbumbulu", "ohlwempu", "ubunuku", "isishimane", "isidididi",
-        "ukuqoqoza", "ongenamqondo", "ongemthetho", "isithunzi", "ohlwempu"
-    ],
-}
+# Merging with rag_data.PEJORATIVE_TERMS
+PEJORATIVE_TERMS = rag_data.PEJORATIVE_TERMS
 
 # E. Stereotyped adjectives
 STEREOTYPED_ADJECTIVES = {
@@ -660,6 +658,43 @@ def rule_9_named_entity_bias(text: str, language: str) -> List[Dict[str, Any]]:
     
     return explanations
 
+def rule_10_stereotypical_pronominalization(text: str, language: str) -> List[Dict[str, Any]]:
+    """Rule 10: Stereotypical Pronominalization (New)"""
+    explanations = []
+    text_lower = text.lower()
+    
+    # Use terms from rag_data
+    terms = rag_data.PRONOMINALIZATION_TERMS
+    
+    for category, words in terms.items():
+        for word in words:
+            if word in text_lower:
+                explanations.append({
+                    "span": word,
+                    "rule_triggered": "Stereotypical Pronominalization",
+                    "reason": f"Use of culturally loaded term '{word}' associated with {category.replace('_', ' ')}."
+                })
+                
+    return explanations
+
+def rule_11_implicit_bias(text: str, language: str) -> List[Dict[str, Any]]:
+    """Rule 11: Implicit Bias (New)"""
+    explanations = []
+    text_lower = text.lower()
+    
+    patterns = rag_data.BIAS_PATTERNS.get("capability_assumptions", [])
+    
+    for pattern in patterns:
+        match = re.search(pattern, text_lower)
+        if match:
+            explanations.append({
+                "span": match.group(),
+                "rule_triggered": "Implicit Bias",
+                "reason": "Implicit assumption about capability detected."
+            })
+            
+    return explanations
+
 
 # =============================================================================
 # SECTION 4: REWRITE TEMPLATES
@@ -781,6 +816,14 @@ def generate_rewrite(text: str, language: str, explanations: List[Dict[str, Any]
     elif "Named Entity Bias" in rules_triggered:
         # For named entity bias, we try to use a neutral description or just keep the name but neutralize the context
         rewritten = template_b_neutral_replacement(text, language)
+    elif "Stereotypical Pronominalization" in rules_triggered:
+        # Try to retrieve a better example using RAG
+        examples = rag_data.retrieve_examples("Stereotypical Pronominalization", k=1)
+        if examples:
+            # This is a bit of a hack, but we can't really "rewrite" cultural idioms without an LLM
+            # So we return the text with a note, or try to apply a generic neutral template
+            # For now, let's use template_b
+            rewritten = template_b_neutral_replacement(text, language)
     else:
         rewritten = template_b_neutral_replacement(text, language)
     
@@ -798,263 +841,99 @@ def analyze(text: str, language: Optional[str] = None, show_progress: bool = Fal
     stages = [
         "Language Detection",
         "Preprocessing & Tokenization", 
-        "Lexicon Matching",
+        "Subject & Action Scanning",
         "Rule Application",
         "Rewrite Generation"
     ]
     
     if show_progress:
         show_stage_progress(stages, 0)
-    
-    # Step 1: Detect language
-    if language is None:
+        
+    # Stage 1: Language Detection
+    if not language:
         language = detect_language(text)
-    elif language in ["tn", "st"]:
-        language = "setswana"
-    elif language in ["zu", "zulu"]:
-        language = "isizulu"
     
     if show_progress:
-        time.sleep(0.2)
         show_stage_progress(stages, 1)
+        
+    # Stage 2: Preprocessing
+    # (Implicitly done in find functions)
     
-    # Step 2: Preprocessing (implicit in rule functions)
     if show_progress:
-        time.sleep(0.2)
         show_stage_progress(stages, 2)
+        
+    # Stage 3: Scanning
+    subjects = find_gendered_subject(text, language)
+    actions = find_stereotyped_actions(text, language)
     
-    # Step 3: Lexicon matching (implicit in rule functions)
     if show_progress:
-        time.sleep(0.2)
         show_stage_progress(stages, 3)
+        
+    # Stage 4: Rule Application
+    explanations = []
     
-    # Step 4: Apply all rules
-    all_explanations = []
-    all_explanations.extend(rule_1_subject_stereotype_match(text, language))
-    all_explanations.extend(rule_2_contrastive_gender_roles(text, language))
-    all_explanations.extend(rule_3_unnecessary_gender_marking(text, language))
-    all_explanations.extend(rule_4_generalizations(text, language))
-    all_explanations.extend(rule_5_diminutives(text, language))
-    all_explanations.extend(rule_6_asymmetrical_ordering(text, language))
-    all_explanations.extend(rule_7_pejorative_association(text, language))
-    all_explanations.extend(rule_9_named_entity_bias(text, language))
-    
-    # Deduplicate
-    seen = set()
-    unique_explanations = []
-    for exp in all_explanations:
-        key = (exp["span"], exp["rule_triggered"])
-        if key not in seen:
-            seen.add(key)
-            unique_explanations.append(exp)
+    rules = [
+        rule_1_subject_stereotype_match,
+        rule_2_contrastive_gender_roles,
+        rule_3_unnecessary_gender_marking,
+        rule_4_generalizations,
+        rule_5_diminutives,
+        rule_6_asymmetrical_ordering,
+        rule_7_pejorative_association,
+        rule_8_translation_bias,
+        rule_9_named_entity_bias,
+        rule_10_stereotypical_pronominalization, # New
+        rule_11_implicit_bias # New
+    ]
     
     if show_progress:
-        time.sleep(0.2)
+        pb = ProgressBar(len(rules), "Applying Rules")
+    
+    for i, rule in enumerate(rules):
+        try:
+            result = rule(text, language)
+            if result:
+                explanations.extend(result)
+        except Exception as e:
+            # Fail gracefully on individual rules
+            pass
+        if show_progress:
+            pb.update()
+            time.sleep(0.05) # Visual delay
+            
+    if show_progress:
+        pb.complete()
         show_stage_progress(stages, 4)
-    
-    # Step 5: Generate rewrite
-    detected_bias = len(unique_explanations) > 0
-    suggested_rewrite = generate_rewrite(text, language, unique_explanations) if detected_bias else text
-    
-    if show_progress:
-        time.sleep(0.1)
-        print("✓ Processing complete!\n")
+        
+    # Stage 5: Rewrite
+    rewrite = generate_rewrite(text, language, explanations)
     
     return {
-        "detected_bias": detected_bias,
-        "language_detected": language,
-        "explanations": unique_explanations,
-        "suggested_rewrite": suggested_rewrite
+        "text": text,
+        "language": language,
+        "has_bias": len(explanations) > 0,
+        "explanations": explanations,
+        "rewrite": rewrite
     }
 
 
-def analyze_json(text: str, language: Optional[str] = None) -> str:
-    """Convenience function that returns JSON string."""
-    result = analyze(text, language)
-    return json.dumps(result, ensure_ascii=False, indent=2)
-
-
-# =============================================================================
-# BATCH PROCESSING
-# =============================================================================
-
-def process_batch(input_file: str, output_file: Optional[str] = None, show_progress: bool = True) -> List[Dict[str, Any]]:
-    """
-    Process multiple texts from a JSON file.
-    
-    Input JSON format:
-    {
-        "items": [
-            {"id": "1", "text": "...", "language": "tn"},
-            {"id": "2", "text": "...", "language": "zu"},
-            ...
-        ]
-    }
-    
-    Returns list of results with original item data plus analysis.
-    """
-    print(f"\n{'=' * 60}")
-    print("BATCH PROCESSING MODE")
-    print(f"{'=' * 60}")
-    print(f"Input file: {input_file}")
-    
-    # Load input
-    with open(input_file, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    
-    items = data.get("items", [])
-    total = len(items)
-    print(f"Found {total} items to process\n")
-    
+def batch_analyze(texts: List[str]) -> List[Dict[str, Any]]:
+    """Analyze a batch of texts."""
     results = []
+    pb = ProgressBar(len(texts), "Batch Processing")
     
-    if show_progress:
-        progress = ProgressBar(total, "Processing")
-    
-    for i, item in enumerate(items):
-        text = item.get("text", "")
-        language = item.get("language")
-        item_id = item.get("id", str(i + 1))
+    for text in texts:
+        results.append(analyze(text))
+        pb.update()
         
-        # Analyze
-        result = analyze(text, language, show_progress=False)
-        
-        # Combine with original item data
-        output_item = {
-            "id": item_id,
-            "original_text": text,
-            **result
-        }
-        results.append(output_item)
-        
-        if show_progress:
-            progress.update()
-    
-    # Summary
-    biased_count = sum(1 for r in results if r["detected_bias"])
-    print(f"\n{'─' * 60}")
-    print(f"BATCH SUMMARY:")
-    print(f"  Total processed:  {total}")
-    print(f"  Bias detected:    {biased_count}")
-    print(f"  No bias:          {total - biased_count}")
-    print(f"{'─' * 60}")
-    
-    # Save output
-    if output_file:
-        output_data = {
-            "summary": {
-                "total": total,
-                "biased": biased_count,
-                "clean": total - biased_count
-            },
-            "results": results
-        }
-        with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(output_data, f, ensure_ascii=False, indent=2)
-        print(f"\nResults saved to: {output_file}")
-    
+    pb.complete()
     return results
 
 
-# =============================================================================
-# CLI INTERFACE
-# =============================================================================
-
-def print_usage():
-    """Print usage information."""
-    print("""
-╔══════════════════════════════════════════════════════════════════╗
-║        RULE-BASED BIAS DETECTION SYSTEM                          ║
-║        Supports Setswana (tn) and isiZulu (zu)                   ║
-╠══════════════════════════════════════════════════════════════════╣
-║  USAGE:                                                          ║
-║                                                                   ║
-║  Single text analysis:                                           ║
-║    python rule_based_detector.py "<text>"                        ║
-║    python rule_based_detector.py --text "<text>"                 ║
-║    python rule_based_detector.py --text "<text>" --lang tn       ║
-║                                                                   ║
-║  Batch processing:                                                ║
-║    python rule_based_detector.py --batch input.json              ║
-║    python rule_based_detector.py --batch input.json -o out.json  ║
-║                                                                   ║
-║  Options:                                                         ║
-║    --text, -t    Text to analyze                                 ║
-║    --lang, -l    Language (tn=Setswana, zu=isiZulu)              ║
-║    --batch, -b   Batch input JSON file                           ║
-║    --output, -o  Output file for batch results                   ║
-║    --progress    Show progress bar (default: on)                 ║
-║    --json        Output as JSON only                             ║
-║    --help, -h    Show this help                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-""")
-
-
 if __name__ == "__main__":
-    import argparse
-    
-    parser = argparse.ArgumentParser(description="Rule-Based Bias Detection System", add_help=False)
-    parser.add_argument("text", nargs="?", help="Text to analyze")
-    parser.add_argument("--text", "-t", dest="text_opt", help="Text to analyze")
-    parser.add_argument("--lang", "-l", help="Language code (tn/zu)")
-    parser.add_argument("--batch", "-b", help="Batch input JSON file")
-    parser.add_argument("--output", "-o", help="Output file for batch results")
-    parser.add_argument("--json", action="store_true", help="Output as JSON only")
-    parser.add_argument("--progress", action="store_true", default=True, help="Show progress")
-    parser.add_argument("--help", "-h", action="store_true", help="Show help")
-    
-    args = parser.parse_args()
-    
-    if args.help:
-        print_usage()
-        sys.exit(0)
-    
-    # Batch mode
-    if args.batch:
-        results = process_batch(args.batch, args.output, show_progress=True)
-        if args.json and not args.output:
-            print(json.dumps(results, ensure_ascii=False, indent=2))
-    
-    # Single text mode
-    elif args.text or args.text_opt:
-        input_text = args.text or args.text_opt
-        
-        if args.json:
-            # JSON-only output
-            result = analyze(input_text, args.lang, show_progress=False)
-            print(json.dumps(result, ensure_ascii=False, indent=2))
-        else:
-            # Full output with progress
-            print(f"\n{'=' * 60}")
-            print("SINGLE TEXT ANALYSIS")
-            print(f"{'=' * 60}")
-            print(f"Input: {input_text}\n")
-            
-            result = analyze(input_text, args.lang, show_progress=True)
-            
-            print(f"\n{'─' * 60}")
-            print("RESULT:")
-            print(f"  Bias Detected: {result['detected_bias']}")
-            print(f"  Language:      {result['language_detected']}")
-            if result['explanations']:
-                print(f"\n  Explanations:")
-                for exp in result['explanations']:
-                    print(f"    • Rule: {exp['rule_triggered']}")
-                    print(f"      Span: {exp['span']}")
-                    print(f"      Reason: {exp['reason']}")
-            print(f"\n  Original:  {input_text}")
-            print(f"  Rewritten: {result['suggested_rewrite']}")
-            print(f"{'─' * 60}")
-            
-            print("\n📄 JSON Output:")
-            print(json.dumps(result, ensure_ascii=False, indent=2))
-    
+    # Simple CLI test
+    if len(sys.argv) > 1:
+        text_input = sys.argv[1]
+        print(json.dumps(analyze(text_input, show_progress=True), indent=2))
     else:
-        # Default example
-        print_usage()
-        print("\nRunning with default example...\n")
-        input_text = "Mosetsana o apea dijo fa mosimane a bala buka."
-        result = analyze(input_text, show_progress=True)
-        print(f"\nInput: {input_text}")
-        print(f"\nOutput:")
-        print(json.dumps(result, ensure_ascii=False, indent=2))
+        print("Usage: python rule_based_detector.py 'Your text here'")

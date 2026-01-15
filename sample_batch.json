@@ -1,0 +1,20 @@
+[
+    {
+        "id": "sample_0001",
+        "lang": "tn",
+        "text": "Mosetsana o apea dijo.",
+        "flags": []
+    },
+    {
+        "id": "sample_0002",
+        "lang": "zu",
+        "text": "Umfana ufunda incwadi.",
+        "flags": []
+    },
+    {
+        "id": "sample_0003",
+        "lang": "tn",
+        "text": "Monna o a nama fa mosadi a pheha.",
+        "flags": []
+    }
+]
