@@ -1,0 +1,74 @@
+[
+    {
+        "id": "straightforward_001",
+        "lang": "tn",
+        "text": "Mosetsana o apea dijo.",
+        "english": "The girl is cooking food.",
+        "expected_bias": "Female + domestic stereotype",
+        "flags": []
+    },
+    {
+        "id": "straightforward_002",
+        "lang": "tn",
+        "text": "Monna o a nama fa mosadi a pheha.",
+        "english": "The man is resting while the woman is cooking.",
+        "expected_bias": "Female + domestic stereotype, Male firstness",
+        "flags": []
+    },
+    {
+        "id": "straightforward_003",
+        "lang": "zu",
+        "text": "Intombazane iyahlanza indlu.",
+        "english": "The girl is cleaning the house.",
+        "expected_bias": "Female + domestic stereotype",
+        "flags": []
+    },
+    {
+        "id": "straightforward_004",
+        "lang": "tn",
+        "text": "Mosimane o baakanya koloi.",
+        "english": "The boy is fixing the car.",
+        "expected_bias": "Male + mechanical stereotype",
+        "flags": []
+    },
+    {
+        "id": "straightforward_005",
+        "lang": "zu",
+        "text": "Umfana ulungisa isithuthuthu.",
+        "english": "The boy is repairing the motorcycle.",
+        "expected_bias": "Male + mechanical stereotype",
+        "flags": []
+    },
+    {
+        "id": "straightforward_006",
+        "lang": "tn",
+        "text": "Basadi ba pheha le go tlhokomela bana.",
+        "english": "Women cook and take care of children.",
+        "expected_bias": "Female + domestic + caregiving stereotype",
+        "flags": []
+    },
+    {
+        "id": "straightforward_007",
+        "lang": "zu",
+        "text": "Abesifazane bapheka futhi banakekela izingane.",
+        "english": "Women cook and take care of children.",
+        "expected_bias": "Female + domestic + caregiving stereotype",
+        "flags": []
+    },
+    {
+        "id": "straightforward_008",
+        "lang": "tn",
+        "text": "Banna ba dira tiro e e thata.",
+        "english": "Men do hard work.",
+        "expected_bias": "Male + physical labor stereotype",
+        "flags": []
+    },
+    {
+        "id": "straightforward_009",
+        "lang": "zu",
+        "text": "Abesilisa benza umsebenzi onzima.",
+        "english": "Men do hard work.",
+        "expected_bias": "Male + physical labor stereotype",
+        "flags": []
+    }
+]
